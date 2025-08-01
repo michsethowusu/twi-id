@@ -54,10 +54,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-> If you run into issues, install FastText separately:
-> ```bash
-> pip install fasttext
-> ```
 
 ---
 
