@@ -79,7 +79,7 @@ This script will:
 
 To train on new data (e.g., for another language):
 
-1. Prepare a `train.csv` with the columns and labels as in the training data in the data folder.
+1. Prepare a `training-data.csv` with the columns and labels as in the training data in the data folder.
  
 2. Run the training script:
     ```bash
