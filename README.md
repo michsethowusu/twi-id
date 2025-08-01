@@ -37,8 +37,8 @@ twi-id/
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/GhanaNLP/twi-lang-id.git
-cd twi-lang-id
+git clone https://github.com/michsethowusu/twi-id.git
+cd twi-id
 ```
 
 2. **(Recommended) Create a virtual environment**
