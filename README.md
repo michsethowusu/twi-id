@@ -14,24 +14,6 @@ This repository contains a simple and fast **language identification system** fo
 
 ---
 
-## 🗂️ Project Structure
-
-```
-twi-id/
-├── data/
-│   ├── train.csv                # Your training data (Twi/Non-Twi labeled)
-│   └── sample_sentences.csv     # Sample file for testing predictions
-├── model/
-│   └── twi_id_model.bin         # Trained FastText model
-├── id_single-sentence.py        # Predicts one sentence at a time
-├── id_multiple-sentences.py     # Prompts user to upload a CSV and outputs predictions
-├── train-model.py               # Script to train the model
-├── requirements.txt             # Python dependencies
-└── README.md                    # This file
-```
-
----
-
 ## 🛠️ Installation
 
 1. **Clone the repository**
@@ -80,7 +62,7 @@ This script will:
 To train on new data (e.g., for another language):
 
 1. Prepare a `training-data.csv` with the columns and labels as in the training data in the data folder.
- 
+
 2. Run the training script:
     ```bash
     python3 train-model.py
@@ -96,16 +78,6 @@ You can test batch predictions with the sample provided:
 
 ```bash
 data/sample_sentences.csv
-```
-
----
-
-## ⚙️ Regenerating Requirements
-
-If you add new dependencies, regenerate `requirements.txt` with:
-
-```bash
-pipreqs . --force
 ```
 
 ---
