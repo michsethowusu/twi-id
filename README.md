@@ -133,5 +133,5 @@ MIT License — feel free to fork, adapt, and build upon it!
 ## 🙌 Acknowledgements
 
 - Built with [FastText](https://fasttext.cc/)
-- Part of the [GhanaNLP](https://github.com/GhanaNLP) open language tech ecosystem
+- Part of the [GhanaNLP's](https://github.com/GhanaNLP) effort to make Ghanaian Languages accesible.
 
