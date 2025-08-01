@@ -41,17 +41,10 @@ git clone https://github.com/michsethowusu/twi-id.git
 cd twi-id
 ```
 
-2. **(Recommended) Create a virtual environment**
+2. **Install dependencies**
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-3. **Install dependencies**
-
-```bash
-pip install -r requirements.txt
+pip install numpy==1.26.4 pandas==2.3.1 scikit-learn==1.7.1 fasttext==0.9.3
 ```
 
 
