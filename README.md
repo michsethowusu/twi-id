@@ -37,27 +37,16 @@ twi-id/
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/GhanaNLP/twi-lang-id.git
-cd twi-lang-id
+git clone https://github.com/michsethowusu/twi-id.git
+cd twi-id
 ```
 
-2. **(Recommended) Create a virtual environment**
+2. **Install dependencies**
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+pip install numpy==1.26.4 pandas==2.3.1 scikit-learn==1.7.1 fasttext==0.9.3
 ```
 
-3. **Install dependencies**
-
-```bash
-pip install -r requirements.txt
-```
-
-> If you run into issues, install FastText separately:
-> ```bash
-> pip install fasttext
-> ```
 
 ---
 
@@ -90,12 +79,9 @@ This script will:
 
 To train on new data (e.g., for another language):
 
-1. Prepare a `train.csv` with the columns and labels as in the sample data:
-    ```bash
-    data/train.csv
-    ```
+1. Prepare a `training-data.csv` with the columns and labels as in the training data in the data folder.
  
-3. Run the training script:
+2. Run the training script:
     ```bash
     python3 train-model.py
     ```
