@@ -38,12 +38,17 @@ def main():
     # Load model
     model = fasttext.load_model(str(model_path))
 
-    # Read input from command line
-    if len(sys.argv) < 2:
-        print("Usage: python src/predict.py \"Your sentence here\"")
-        return
+    # Get input text
+    if len(sys.argv) > 1:
+        # Use command-line argument if provided
+        input_text = " ".join(sys.argv[1:])
+    else:
+        # Prompt user if no argument given
+        input_text = input("\nEnter a sentence to analyze: ").strip()
+        if not input_text:
+            print("⚠️  No input provided. Exiting.")
+            return
 
-    input_text = " ".join(sys.argv[1:])
     predictions = safe_predict(model, input_text, k=3)
 
     print(f"\n🔎 Input: {input_text}\nTop Predictions:")
@@ -52,4 +57,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
