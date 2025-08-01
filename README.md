@@ -65,7 +65,7 @@ To train on new data (e.g., for another language):
 
 2. Run the training script:
     ```bash
-    python3 train-model.py
+    python3 train.py
     ```
 
 This will output a `twi_id_model.bin` file inside the `model/` directory.
