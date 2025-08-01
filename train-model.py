@@ -41,7 +41,7 @@ results = model.test(test_file)
 print(f"\nEvaluation results:\nPrecision: {results[1]:.4f}\nRecall: {results[2]:.4f}\nNumber of examples: {results[0]:,}")
 
 # Step 8: Save the model
-model.save_model("twi_id_model.bin")
+model.save_model("model/twi_id_model.bin")
 print("\nModel saved'")
 
 # Step 9: Fixed prediction example
