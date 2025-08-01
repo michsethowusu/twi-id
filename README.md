@@ -79,12 +79,9 @@ This script will:
 
 To train on new data (e.g., for another language):
 
-1. Prepare a `train.csv` with the columns and labels as in the sample data:
-    ```bash
-    data/train.csv
-    ```
+1. Prepare a `train.csv` with the columns and labels as in the training data in the data folder.
  
-3. Run the training script:
+2. Run the training script:
     ```bash
     python3 train-model.py
     ```
