@@ -2,15 +2,10 @@
 
 This repository contains a simple and fast **language identification system** for detecting whether a sentence is in **Twi (Akan)** or not. It uses **FastText** for both training and inference and is designed to be easily adapted for other low-resource languages.
 
----
+This repo can help you to:
 
-## 🧠 What It Does
-
-- Trains a binary classifier to detect Twi language sentences.
-- Includes a pre-trained model for immediate use.
-- Supports **batch** and **single sentence** prediction.
-- Accepts CSV uploads and allows users to **predict in bulk**.
-- Easily adaptable to other languages with your own training data.
+- Verify if sentences in your dataset are in Twi or not.
+- Train a binary classifier for any other language using your dataset.
 
 ---
 
