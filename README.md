@@ -37,7 +37,7 @@ pip install numpy==1.26.4 pandas==2.3.1 scikit-learn==1.7.1 fasttext==0.9.3
 ### 🔹 Predict a Single Sentence
 
 ```bash
-python3 id_single-sentence.py
+python3 single-id.py
 ```
 
 You'll be prompted to enter a sentence and the script will return whether it's in Twi or not.
@@ -47,7 +47,7 @@ You'll be prompted to enter a sentence and the script will return whether it's i
 ### 🔹 Predict from CSV (Batch)
 
 ```bash
-python3 id_multiple-sentences.py
+python3 batch-id.py
 ```
 
 This script will:

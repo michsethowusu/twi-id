@@ -3,6 +3,9 @@
 import fasttext
 import pandas as pd
 from pathlib import Path
+import tkinter as tk
+from tkinter import filedialog
+import os
 
 def safe_predict(model, text, k=1):
     """
@@ -32,13 +35,22 @@ def choose_column(columns):
 def main():
     print("🟡 Twi Language Batch Detector")
 
-    # Prompt for CSV input file
-    input_path = input("📥 Enter path to input CSV file (e.g. data/test_sentences.csv): ").strip()
-    input_file = Path(input_path)
+    # Initialize Tkinter root and hide the main window
+    root = tk.Tk()
+    root.withdraw()
 
-    if not input_file.exists():
-        print("❌ File not found. Please check the path and try again.")
+    # Prompt for CSV input file using file dialog
+    print("\n📥 Please select the input CSV file...")
+    input_path = filedialog.askopenfilename(
+        title="Select Input CSV File",
+        filetypes=[("CSV files", "*.csv"), ("All files", "*.*")]
+    )
+    
+    if not input_path:
+        print("❌ No file selected. Exiting.")
         return
+
+    input_file = Path(input_path)
 
     # Load CSV
     try:
@@ -50,9 +62,21 @@ def main():
     # Ask user to pick column
     text_column = choose_column(df.columns)
 
-    # Prompt for output file name
-    output_path = input("📤 Enter path to save predictions CSV (e.g. data/predicted.csv): ").strip()
-    output_file = Path(output_path)
+    # Create data folder if it doesn't exist
+    data_folder = Path("data")
+    data_folder.mkdir(exist_ok=True)
+
+    # Generate output filename based on input filename
+    input_filename = input_file.stem
+    output_filename = f"{input_filename}_predictions.csv"
+    output_file = data_folder / output_filename
+
+    # Check if output file exists and prompt for overwrite
+    if output_file.exists():
+        overwrite = input(f"\n⚠️ File {output_file} already exists. Overwrite? (y/n): ").strip().lower()
+        if overwrite != 'y':
+            print("❌ Operation cancelled.")
+            return
 
     # Load model
     model_path = Path("model/twi_id_model.bin")
@@ -74,4 +98,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
