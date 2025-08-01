@@ -1,4 +1,4 @@
-# Twi Language Identification Model 🇬🇭
+# Twi Language Identification Model
 
 This repository contains a simple and fast **language identification system** for detecting whether a sentence is in **Twi (Akan)** or not. It uses **FastText** for both training and inference and is designed to be easily adapted for other low-resource languages.
 
@@ -90,12 +90,12 @@ This script will:
 
 To train on new data (e.g., for another language):
 
-1. Prepare a `train.csv` with the following format:
+1. Prepare a `train.csv` with the columns and labels as in the sample data:
+    ```bash
+    data/train.csv
     ```
-    __label__twi    sentence in Twi
-    __label__not    sentence in English
-    ```
-2. Run the training script:
+ 
+3. Run the training script:
     ```bash
     python3 train-model.py
     ```
